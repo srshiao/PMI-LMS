@@ -1,0 +1,39 @@
+{%load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+table {
+    display: table;
+    position:absolute;
+    border-collapse: separate;
+    border-spacing: 20px;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+
+  <table border="1" bgcolor="#CCFFFF" style="width:50%">
+
+    <thead>
+      <tr bgcolor="#333366" style="color:white" >
+        <th> Intern </th>
+        <th> Total Hours </th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in exp %}
+        <tr>
+          <td>{{ user.intern__FName }} {{ user.intern__LName}}</td>
+          <td>{{ user.total }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
+

@@ -15,11 +15,11 @@ import sys
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
 sys.path.append(os.path.join(PROJECT_ROOT,'PMI-Intern-Signin'))
 
-from clockin.config import *
+from lms.config import *
 
 from django.contrib import admin
-admin.site.site_url = '/clockin'
-from clockin.config import *
+admin.site.site_url = '/lms'
+from lms.config import *
 
 
 
@@ -45,7 +45,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
-    'clockin.apps.ClockinConfig',
+    'lms.apps.lmsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,7 +71,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'timesheet.urls'
+ROOT_URLCONF = 'main.urls'
 
 TEMPLATES = [
     {
@@ -91,7 +91,7 @@ TEMPLATES = [
     },
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-WSGI_APPLICATION = 'timesheet.wsgi.application'
+WSGI_APPLICATION = 'main.wsgi.application'
 
 
 # Database

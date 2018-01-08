@@ -3,12 +3,12 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.contrib.auth import logout
-from clockin.config import *
+from lms.config import *
 
 
 def logout_page(request):
     logout(request)
-    return HttpResponseRedirect('/clockin/')
+    return HttpResponseRedirect('/lms/')
 
 #@login_required
 def adminhome(request):
@@ -17,4 +17,4 @@ def adminhome(request):
 	context = {
 		'period' : PERIOD
 	}
-	return render(request, 'timesheet/admin_home.html', context)
+	return render(request, 'main/admin_home.html', context)

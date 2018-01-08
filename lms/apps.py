@@ -3,5 +3,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class ClockinConfig(AppConfig):
-    name = 'clockin'
+class lmsConfig(AppConfig):
+    name = 'lms'
